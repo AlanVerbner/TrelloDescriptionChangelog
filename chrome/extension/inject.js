@@ -16,7 +16,7 @@ const createStore = require('../../app/store/configureStore');
 const store = createStore(initialState);
 
 function getCardId(url) {
-  return '9hL8eZcu';
+  return url.match(/^https:\/\/trello.com\/c\/(.+)\/.+$/)[1];
 }
 
 class InjectApp extends Component {
@@ -29,13 +29,12 @@ class InjectApp extends Component {
   }
 
   buttonOnClick() {
-    console.log(this);
     const nextVisibleState = !this.state.isVisible;
     this.setState({
       isVisible: nextVisibleState
     });
     if (nextVisibleState) {
-      const cardId = getCardId(window.location);
+      const cardId = getCardId(window.location.href);
       store.dispatch(getCardHistory(cardId));
     }
   }

@@ -32,7 +32,7 @@ export default function HistoryRecord(props) {
         <div className="comment-container">
           <div className="action-comment markeddown js-comment" dir="auto">
             <div className="current-comment js-friendly-links js-open-card">
-              <p><ReactMarkdown source={historyRecord.data.card.desc} /></p>
+              <ReactMarkdown source={historyRecord.data.card.desc} />
             </div>
           </div>
         </div>
