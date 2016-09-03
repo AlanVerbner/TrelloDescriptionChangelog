@@ -7,13 +7,13 @@
 
 ## TODO
 
-[ ] Catch webservice errors
-[ ] Show an indicator when the app is fetching data
-[ ] Remove unused code broght by the project the repo was based on
-[ ] Fix eslint errors
-[ ] Update README.md
-[ ] Tests
-[ ] Remove this todo once everything is done :P
+- [ ] Catch webservice errors
+- [ ] Show an indicator when the app is fetching data
+- [ ] Remove unused code broght by the project the repo was based on
+- [ ] Fix eslint errors
+- [ ] Update README.md
+- [ ] Tests
+- [ ] Remove this todo once everything is done :P
 
 
 # React Chrome Extension Boilerplate
