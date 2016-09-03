@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 
 import moment from 'moment';
-import ReactMarkdown from 'react-markdown';
 
 export default function HistoryRecord(props) {
   /*static propTypes = {
@@ -15,7 +14,8 @@ export default function HistoryRecord(props) {
 
 
   const {
-    historyRecord
+    historyRecord,
+    children
   } = props;
 
   return (
@@ -32,7 +32,7 @@ export default function HistoryRecord(props) {
         <div className="comment-container">
           <div className="action-comment markeddown js-comment" dir="auto">
             <div className="current-comment js-friendly-links js-open-card">
-              <ReactMarkdown source={historyRecord.data.card.desc} />
+              {children}  
             </div>
           </div>
         </div>
