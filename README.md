@@ -2,7 +2,7 @@
 
 ## Motivation
 
-- Trello doesn't have an option to show a card description history changelog. This adds that functionallity.
+- Trello doesn't have an option to show a card description history changelog.
 - For fun! (react + redux are awesome)
 
 ## TODO
