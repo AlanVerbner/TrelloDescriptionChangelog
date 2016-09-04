@@ -7,7 +7,7 @@ This repo is based on this great repo https://github.com/jhen0409/react-chrome-e
 - Trello doesn't have an option to show a card description history changelog.
 - For fun! (react + redux are awesome)
 
-
+![Example](https://cloud.githubusercontent.com/assets/3750504/18231231/aedc8a1a-7289-11e6-8914-84ef2434284d.gif)
 
 ## TODO
 
@@ -35,18 +35,6 @@ This repo is based on this great repo https://github.com/jhen0409/react-chrome-e
 ## Examples
 
 The example is edited from [Redux](https://github.com/rackt/redux) TodoMVC example.
-
-#### Popup
-
-![Popup](https://cloud.githubusercontent.com/assets/3001525/14128490/dc05e9f8-f653-11e5-9de6-82d1de01844a.gif)
-
-The `todos` state will be saved to `chrome.storage.local`.
-
-#### Window
-
-![Window](https://cloud.githubusercontent.com/assets/3001525/14128489/da176b62-f653-11e5-9bff-fefc35232358.gif)
-
-The context menu is created by [chrome/extension/background/contextMenus.js](chrome/extension/background/contextMenus.js).
 
 #### Inject page
 
