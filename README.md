@@ -1,3 +1,24 @@
+# Trello Description Changelog Plugin
+
+This repo is based on this great repo https://github.com/jhen0409/react-chrome-extension-boilerplate.git
+
+## Motivation
+
+- Trello doesn't have an option to show a card description history changelog.
+- For fun! (react + redux are awesome)
+
+## TODO
+
+- [ ] Catch webservice errors
+- [ ] Show an indicator when the app is fetching data
+- [ ] Remove unused code broght by the project the repo was based on
+- [ ] Fix eslint errors
+- [ ] Clean package.json
+- [ ] Update README.md
+- [ ] Tests
+- [ ] Remove this todo once everything is done :P
+
+
 # React Chrome Extension Boilerplate
 
 [![Build Status](https://travis-ci.org/jhen0409/react-chrome-extension-boilerplate.svg?branch=master)](https://travis-ci.org/jhen0409/react-chrome-extension-boilerplate)
