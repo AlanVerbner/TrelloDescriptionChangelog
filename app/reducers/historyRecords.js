@@ -2,25 +2,27 @@ import * as ActionTypes from '../constants/ActionTypes';
 
 const initialState = [];
 
+function pruneHistoryRecord(historyRecord) {
+  return {
+    id: historyRecord.id,
+    memberCreator: {
+      fullName: historyRecord.memberCreator.fullName,
+      username: historyRecord.memberCreator.username,
+      initials: historyRecord.memberCreator.initials,
+    },
+    data: {
+      card: {
+        desc: historyRecord.data.card.desc,
+        oldDesc: historyRecord.data.old.desc
+      }
+    },
+    date: historyRecord.date
+  };
+}
+
 const actionsMap = {
   [ActionTypes.GET_TRELLO_HISTORY_SUCCESS](state, action) {
-    return action.payload.map(historyRecord => {
-      return {
-        id: historyRecord.id,
-        memberCreator: {
-          fullName: historyRecord.memberCreator.fullName,
-          username: historyRecord.memberCreator.username,
-          initials: historyRecord.memberCreator.initials,
-        },
-        data: {
-          card: {
-            desc: historyRecord.data.card.desc,
-            oldDesc: historyRecord.data.old.desc
-          }
-        },
-        date: historyRecord.date
-      };
-    });
+    return action.payload.map(pruneHistoryRecord);
   }
 };
 
