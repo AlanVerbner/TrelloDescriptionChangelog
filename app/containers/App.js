@@ -33,8 +33,6 @@ class App extends Component {
       actions
     } = this.props;
 
-    console.log(viewMode);
-
     return (
       <div className={style.container}>
         <div className="window-title">
