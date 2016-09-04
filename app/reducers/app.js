@@ -9,7 +9,23 @@ const actionsMap = {
     return Object.assign({}, state, {
       viewMode: state.viewMode === 'list' ? 'diff' : 'list'
     });
-  }
+  },
+  [ActionTypes.GET_TRELLO_HISTORY_START](state) {
+    return Object.assign({}, state, {
+      loadingData: true
+    });
+  },
+  [ActionTypes.GET_TRELLO_HISTORY_SUCCESS](state) {
+    return Object.assign({}, state, {
+      loadingData: false
+    });
+  },
+  [ActionTypes.GET_TRELLO_HISTORY_FAILED](state) {
+    return Object.assign({}, state, {
+      loadingData: false,
+      errorFetching: true,
+    });
+  },
 };
 
 export default function todos(state = initialState, action) {

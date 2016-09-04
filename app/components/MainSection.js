@@ -8,8 +8,8 @@ import Diff from 'react-diff';
 import HistoryRecord from './HistoryRecord';
 // import style from './MainSection.css';
 
-function drawDiff(historyRecord, index, allItems) {
-  const inputA = index + 1 < allItems.length ? allItems[index + 1].data.card.desc : '';
+function drawDiff(historyRecord) {
+  const inputA = historyRecord.data.card.oldDesc;
   const inputB = historyRecord.data.card.desc;
   return (
     <Diff key={historyRecord.id} inputA={inputA} inputB={inputB} type="chars" />
@@ -37,7 +37,7 @@ export default function MainSection(props) {
     <div className="js-list-actions">
       {historyRecords.map((historyRecord, index, allItems) =>
         <HistoryRecord key={historyRecord.id} historyRecord={historyRecord}>
-          {viewMode === 'list' ? drawMarkdown(historyRecord) : drawDiff(historyRecord, index, allItems)}
+          {viewMode === 'list' ? drawMarkdown(historyRecord) : drawDiff(historyRecord)}
         </HistoryRecord>
       )}
     </div >

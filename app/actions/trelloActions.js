@@ -7,7 +7,11 @@ headers.append('Content-Type', 'application/json');
 
 export function getCardHistory(cardId) {
   return dispatch => {
-    fetch(
+    dispatch({
+      type: types.GET_TRELLO_HISTORY_START,
+    });
+
+    return fetch(
         TRELLO_HISTORY_URL.replace('CARD_ID', cardId), {
           method: 'GET',
           headers,
@@ -24,9 +28,5 @@ export function getCardHistory(cardId) {
           payload: err
         });
       });
-
-    return {
-      type: types.GET_TRELLO_HISTORY_START,
-    };
   };
 }
