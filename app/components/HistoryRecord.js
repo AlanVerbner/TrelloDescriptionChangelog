@@ -5,14 +5,6 @@ import React, {
 import moment from 'moment';
 
 export default function HistoryRecord(props) {
-  /*static propTypes = {
-    todo: PropTypes.object.isRequired,
-    editTodo: PropTypes.func.isRequired,
-    deleteTodo: PropTypes.func.isRequired,
-    completeTodo: PropTypes.func.isRequired
-  };*/
-
-
   const {
     historyRecord,
     children
@@ -22,7 +14,12 @@ export default function HistoryRecord(props) {
     <div className="phenom mod-comment-type">
       <div className="phenom-creator">
         <div className="member">
-          <span className="member-initials" title={`${historyRecord.memberCreator.fullName} (${historyRecord.memberCreator.username})`}>{historyRecord.memberCreator.initials}</span>
+          <span
+            className="member-initials"
+            title={`${historyRecord.memberCreator.fullName} (${historyRecord.memberCreator.username})`}
+          >
+            {historyRecord.memberCreator.initials}
+          </span>
         </div>
       </div>
       <div className="phenom-desc">
@@ -32,7 +29,7 @@ export default function HistoryRecord(props) {
         <div className="comment-container">
           <div className="action-comment markeddown js-comment" dir="auto">
             <div className="current-comment js-friendly-links js-open-card">
-              {children}  
+              {children}
             </div>
           </div>
         </div>
@@ -43,4 +40,9 @@ export default function HistoryRecord(props) {
       </p>
     </div>
   );
+}
+
+HistoryRecord.propTypes = {
+  historyRecord: PropTypes.object.isRequired,
+  children: React.PropTypes.object.isRequired
 };

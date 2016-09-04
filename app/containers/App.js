@@ -14,12 +14,6 @@ import style from './App.css';
 import * as appActions from '../actions/appActions';
 
 class App extends Component {
-  static propTypes = {
-    cardName: PropTypes.string.isRequired,
-    historyRecords: PropTypes.array.isRequired,
-    viewMode: PropTypes.string.isRequired
-  };
-
   getViewModeButtonText(viewMode) {
     const text = viewMode === 'diff' ? 'list' : 'diff';
     return `View ${text}`;
@@ -45,6 +39,13 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  historyRecords: PropTypes.array.isRequired,
+  viewMode: PropTypes.string.isRequired,
+  actions: PropTypes.object.isRequired
+};
 
 export default connect(state => ({
   historyRecords: state.historyRecords,

@@ -1,5 +1,4 @@
 import React, {
-  Component,
   PropTypes
 } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -23,19 +22,14 @@ function drawMarkdown(historyRecord) {
 }
 
 export default function MainSection(props) {
-  /*static propTypes = {
-    todos: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
-  };*/
-
   const {
     historyRecords,
     viewMode
   } = props;
-  
+
   return (
     <div className="js-list-actions">
-      {historyRecords.map((historyRecord, index, allItems) =>
+      {historyRecords.map((historyRecord) =>
         <HistoryRecord key={historyRecord.id} historyRecord={historyRecord}>
           {viewMode === 'list' ? drawMarkdown(historyRecord) : drawDiff(historyRecord)}
         </HistoryRecord>
@@ -43,3 +37,8 @@ export default function MainSection(props) {
     </div >
   );
 }
+
+MainSection.propTypes = {
+  historyRecords: PropTypes.array.isRequired,
+  viewMode: PropTypes.string.isRequired
+};
