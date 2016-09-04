@@ -9,8 +9,8 @@ This repo is based on this great repo https://github.com/jhen0409/react-chrome-e
 
 ## TODO
 
-- [ ] Catch webservice errors
-- [ ] Show an indicator when the app is fetching data
+- [x] Catch webservice errors
+- [x] Show an indicator when the app is fetching data
 - [ ] Remove unused code broght by the project the repo was based on
 - [ ] Fix eslint errors
 - [ ] Clean package.json
