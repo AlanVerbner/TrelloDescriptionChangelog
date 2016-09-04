@@ -43,7 +43,6 @@ class InjectApp extends Component {
     return (
       <div>
         <button id="show-history" onClick={this.buttonOnClick}>
-          Open TodoApp
         </button>
         <Dock
           position="right"

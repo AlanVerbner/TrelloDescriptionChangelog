@@ -1,12 +1,8 @@
 {
-  "version": "0.0.0",
-  "name": "react-chrome-extension-example",
+  "version": "1.0.0",
+  "name": "Trello description changelog",
   "manifest_version": 2,
-  "description": "Example for react-chrome-extension-boilerplate",
-  "browser_action": {
-    "default_title": "React Chrome Extension Example",
-    "default_popup": "popup.html"
-  },
+  "description": "Trello description changelog",
   "icons": {
     "16": "img/icon-16.png",
     "48": "img/icon-48.png",
@@ -18,6 +14,6 @@
   "background": {
     "page": "background.html"
   },
-  "permissions": [ "contextMenus", "tabs", "storage", "https://trello.com/*" ],
+  "permissions": ["tabs", "https://trello.com/*"],
   "content_security_policy": "default-src 'self'; script-src 'self'; style-src * 'unsafe-inline'; img-src 'self' data:;"
 }
