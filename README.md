@@ -1,6 +1,10 @@
 # Trello Description Changelog Plugin
 
-This repo is based on this great repo https://github.com/jhen0409/react-chrome-extension-boilerplate.git
+[![Build Status](https://travis-ci.org/jhen0409/react-chrome-extension-boilerplate.svg?branch=master)](https://travis-ci.org/jhen0409/react-chrome-extension-boilerplate)
+[![Build status: Windows](https://ci.appveyor.com/api/projects/status/b5xy6ev6oykth0d2/branch/master?svg=true)](https://ci.appveyor.com/project/jhen0409/react-chrome-extension-boilerplate/branch/master)
+[![NPM version](http://img.shields.io/npm/v/react-chrome-extension-boilerplate.svg?style=flat)](https://www.npmjs.com/package/react-chrome-extension-boilerplate)
+[![Dependency Status](https://david-dm.org/jhen0409/react-chrome-extension-boilerplate.svg)](https://david-dm.org/jhen0409/react-chrome-extension-boilerplate)
+[![devDependency Status](https://david-dm.org/jhen0409/react-chrome-extension-boilerplate/dev-status.svg)](https://david-dm.org/jhen0409/react-chrome-extension-boilerplate#info=devDependencies)
 
 ## Motivation
 
@@ -13,17 +17,17 @@ This repo is based on this great repo https://github.com/jhen0409/react-chrome-e
 
 - [x] Catch webservice errors
 - [x] Show an indicator when the app is fetching data
-- [ ] Remove unused code broght by the project the repo was based on
-- [ ] Fix eslint errors
+- [x] Remove unused code broght by the project the repo was based on
+- [x] Fix eslint errors
 - [ ] Clean package.json
-- [ ] Update README.md
+- [x] Update README.md
 - [ ] Tests
 - [ ] Remove this todo once everything is done :P
 
 
-# React Chrome Extension Boilerplate
+# Acknowledgment 
 
-> Boilerplate for Chrome Extension React.js project.
+This is based on this great repo [React Chrome Extension Boilerplate](https://github.com/jhen0409/react-chrome-extension-boilerplate.git)
 
 ## Features
 
@@ -31,10 +35,6 @@ This repo is based on this great repo https://github.com/jhen0409/react-chrome-e
  - Hot reloading React/Redux (Using [Webpack](https://github.com/webpack/webpack) and [React Transform](https://github.com/gaearon/react-transform))
  - Write code with ES2015+ syntax (Using [Babel](https://github.com/babel/babel))
  - E2E tests of Window & Popup & Inject pages (Using [Chrome Driver](https://www.npmjs.com/package/chromedriver), [Selenium Webdriver](https://www.npmjs.com/package/selenium-webdriver))
-
-## Examples
-
-The example is edited from [Redux](https://github.com/rackt/redux) TodoMVC example.
 
 #### Inject page
 
