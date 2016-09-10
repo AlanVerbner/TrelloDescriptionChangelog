@@ -32,7 +32,7 @@ class App extends Component {
         content = (<h4>Error while fetching changelog</h4>);
         break;
       case 'noItems':
-        content = (<h4>No changelog found for this card</h4>);
+        content = (<h4 id="no-items-title">No changelog found for this card</h4>);
         break;
       case 'itemsLoaded':
         content = (<MainSection historyRecords={historyRecords} viewMode={viewMode} cardName={cardName} switchViewMode={actions.switchViewMode} />);
@@ -42,7 +42,7 @@ class App extends Component {
     }
 
     return (
-      <div className={style.container}>
+      <div id="history-container" className={style.container}>
         {content}
       </div>
     );

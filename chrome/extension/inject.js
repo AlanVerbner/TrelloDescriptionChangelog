@@ -6,6 +6,7 @@ import {
 } from 'react-dom';
 
 import Dock from 'react-dock';
+import arrive from 'arrive';
 import Root from '../../app/containers/Root';
 import {
   getCardHistory
@@ -58,13 +59,17 @@ class InjectApp extends Component {
   }
 }
 
+const extensionClass = 'trello-history';
+const showHistoryButtonClass = 'show-trello-history';
+const cardDetailClass = 'card-detail-data';
+
 function tryLoadDetailButton() {
-  const detailCards = document.getElementsByClassName('card-detail-data');
+  const detailCards = document.getElementsByClassName(cardDetailClass);
   if (detailCards.length === 0) return;
-  const wasntAddedBefore = document.getElementsByClassName('show-trello-history').length === 0;
+  const wasntAddedBefore = document.getElementsByClassName(showHistoryButtonClass).length === 0;
   if (wasntAddedBefore) {
     const button = document.createElement('button');
-    button.className = 'show-trello-history';
+    button.className = showHistoryButtonClass;
     button.type = 'button';
     button.innerHTML = 'Show History';
     button.onclick = () => {
@@ -74,17 +79,28 @@ function tryLoadDetailButton() {
   }
 }
 
-window.addEventListener('load', () => {
-  const injectDOM = document.createElement('div');
-  injectDOM.className = 'trello-history';
-  injectDOM.style.textAlign = 'center';
-  document.body.appendChild(injectDOM);
-  render(<InjectApp />, injectDOM);
+function tryLoadExtension() {
+  const detailCards = document.getElementsByClassName(extensionClass);
+  if (detailCards.length === 0) {
+    const injectDOM = document.createElement('div');
+    injectDOM.className = extensionClass;
+    injectDOM.style.textAlign = 'center';
+    document.body.appendChild(injectDOM);
+    render(<InjectApp />, injectDOM);
+  }
   tryLoadDetailButton();
+}
+
+window.addEventListener('load', () => {
+  tryLoadExtension();
 });
 
 chrome.extension.onMessage.addListener((msg) => {
   if (msg.action === 'UrlChanged') {
     tryLoadDetailButton();
   }
+});
+
+document.arrive(`.${cardDetailClass}`, () => {
+  tryLoadDetailButton();
 });
