@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown';
 import Diff from 'react-diff';
 
 import HistoryRecord from './HistoryRecord';
-// import style from './MainSection.css';
 
 function drawDiff(historyRecord) {
   const inputA = historyRecord.data.card.oldDesc;
