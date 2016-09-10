@@ -18,9 +18,10 @@
 - [x] Show an indicator when the app is fetching data
 - [x] Remove unused code broght by the project the repo was based on
 - [x] Fix eslint errors
-- [ ] Clean package.json
+- [x] Clean package.json
 - [x] Update README.md
-- [ ] Tests
+- [x] e2e Tests
+- [ ] app Tests
 - [ ] Remove this todo once everything is done :P
 
 

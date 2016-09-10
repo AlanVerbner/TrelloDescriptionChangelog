@@ -1,9 +1,6 @@
 import path from 'path';
 import webdriver from 'selenium-webdriver';
 import {
-  expect
-} from 'chai';
-import {
   startChromeDriver,
   buildWebDriver
 } from '../func';

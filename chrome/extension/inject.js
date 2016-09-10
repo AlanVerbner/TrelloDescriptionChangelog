@@ -6,7 +6,7 @@ import {
 } from 'react-dom';
 
 import Dock from 'react-dock';
-import arrive from 'arrive';
+import 'arrive';
 import Root from '../../app/containers/Root';
 import {
   getCardHistory
