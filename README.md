@@ -25,7 +25,7 @@
 - [ ] Remove this todo once everything is done :P
 
 
-# Acknowledgment 
+## Acknowledgment 
 
 This is based on this great repo [React Chrome Extension Boilerplate](https://github.com/jhen0409/react-chrome-extension-boilerplate.git)
 
